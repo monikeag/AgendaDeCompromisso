@@ -45,11 +45,32 @@ function exibirCompromissos() {
         const div = document.createElement('div'); // Cria um elemento div para cada compromisso
         div.classList.add('compromisso'); // Adiciona uma classe CSS para estilização
         div.innerHTML = `<strong>${comp.compromisso}</strong><br>
-        ${comp.data} às ${comp.hora} `; // Adiciona o conteúdo do compromisso à div
+        ${comp.data} às ${comp.hora} <br>
+        <button class="btn-excluir" data-id="${comp.id}">Apagar</button>`;
+
+        const botao = div.querySelector('.btn-excluir'); // Seleciona o botão de excluir dentro da div
+        botao.addEventListener('click', function () {
+            const id = Number(this.getAttribute('data-id')); // Obtém o ID do compromisso a ser excluído
+            excluirCompromisso(id); // Chama a função para excluir o compromisso
+        });
+
+        // Adiciona o conteúdo do compromisso à div
         listaCompromissos.appendChild(div); // Adiciona a div à lista de compromissos'
+
     });
 
 
+
+
+
+}
+
+function excluirCompromisso(id) {
+    let compromissos = JSON.parse(localStorage.getItem('compromissos')) || []; // Recupera os compromissos do localStorage
+    const novaLista = compromissos.filter(comp => comp.id !== id); // Filtra os compromissos, removendo o que tem o ID correspondente
+    localStorage.setItem('compromissos', JSON.stringify(novaLista)); // Atualiza o localStorage com a nova lista de compromissos
+
+    exibirCompromissos(); // Chama a função para exibir os compromissos
 }
 
 exibirCompromissos(); // Chama a função para exibir os compromissos

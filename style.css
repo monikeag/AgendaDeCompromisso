@@ -28,8 +28,9 @@ body.dark-mode {
 }
 
 body.dark-mode .compromisso {
-    background-color: #2c2c2ccc;
-    color: #fff;
+    background-color: #FFFAF4;
+
+    color: #0f0f0f;
     border-color: #444;
 
 
@@ -37,12 +38,19 @@ body.dark-mode .compromisso {
 
 body.dark-mode input,
 body.dark-mode button {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: #fff;
     border: none;
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+body.dark-mode h1 {
+    color: #eeeeee;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 40px;
 }
 
 #toggle-dark-mode {
@@ -101,7 +109,7 @@ body.dark-mode button {
 
 /* Lista de compromissos */
 #lista-compromissos {
-    max-width: 500px;
+    max-width: 530px;
     margin: 0 auto;
 }
 
@@ -116,7 +124,7 @@ h1 {
 .compromisso {
     background-color: #fff;
     border-left: 6px solid #A9DD10;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     padding: 2rem;
     border-radius: 8px;
     position: relative;
@@ -155,7 +163,7 @@ h1 {
 /*Tornando o layout Responsivo*/
 @media (max-width: 600px) {
     .container {
-        padding: 10px;
+        padding: 5px;
     }
 
 
@@ -163,6 +171,7 @@ h1 {
     form {
         display: flex;
         flex-direction: column;
+
     }
 
     input,
@@ -179,8 +188,8 @@ h1 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        font-size: 16px;
-        padding: 20px;
+        font-size: 18px;
+        padding: 15px;
         gap: 10px;
     }
 
@@ -191,7 +200,7 @@ h1 {
     .compromisso button.btn-excluir {
         position: static;
         align-self: flex-end;
-        margin-top: 10px;
+        margin-top: 15px;
     }
 
     .compromisso strong {
@@ -221,4 +230,9 @@ h1 {
         font-size: 50px;
 
     }
+
+    h1 {
+        padding-top: 15px;
+    }
+
 }

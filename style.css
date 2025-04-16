@@ -16,13 +16,14 @@ body {
 body.dark-mode {
     background-color: #1e1e1e;
     color: #eee;
+    transition: background-color 0.3s, color 0.3s;
 
 }
 
 body.dark-mode .compromisso {
-    background-color: #FFFAF4;
-    color: #1e1e1e;
-
+    background-color: #2c2c2ccc;
+    color: #fff;
+    border-color: #444;
 }
 
 body.dark-mode input,
@@ -30,20 +31,17 @@ body.dark-mode button {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 0.75rem;
+    padding: 10px;
     border-radius: 20px;
 }
 
-/* Modo claro */
-body.light-mode {
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-body.light-mode .compromisso {
-    background-color: #fff;
-    color: #333;
-    border-color: #ccc;
+#toggle-dark-mode {
+    background-color: #cecece;
+    color: #0c0b0b;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 500;
 }
 
 #form-compromisso {

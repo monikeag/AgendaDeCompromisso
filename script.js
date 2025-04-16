@@ -93,11 +93,4 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-const btnlightMode = document.getElementById('toggle-light-mode');
-btnlightMode.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
 
-    // Salva preferência no localStorage
-    const modoClaroAtivado = document.body.classList.contains('light-mode');
-    localStorage.setItem('modo-claro', modoClaroAtivado);
-});

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Schibsted Grotesk', sans-serif;
+
+}
+
+body {
+    background: #FFFAF4;
+    color: #333;
+    padding: 2rem;
+}
+
+#form-compromisso {
+    background-color: #FFFAF4;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0, .05);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+#form-compromisso input[type="text"],
+#form-compromisso input[type="date"],
+#form-compromisso input[type="time"] {
+    width: 100%;
+    padding: 0.75rem;
+    /*tamanho dentro da caixa*/
+    margin-bottom: 1rem;
+    /*margem entre as caixas*/
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+}

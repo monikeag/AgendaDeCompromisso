@@ -12,6 +12,40 @@ body {
     padding: 2rem;
 }
 
+/* Modo escuro */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #eee;
+
+}
+
+body.dark-mode .compromisso {
+    background-color: #FFFAF4;
+    color: #1e1e1e;
+
+}
+
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 20px;
+}
+
+/* Modo claro */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode .compromisso {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}
+
 #form-compromisso {
     background-color: #FFFAF4;
     padding: 2rem;
@@ -32,4 +66,76 @@ body {
     border: 1px solid #ccc;
     border-radius: 6px;
 
+}
+
+#form-compromisso input:focus {
+    border-color: #302D85;
+    outline: none;
+}
+
+#form-compromisso button {
+    background-color: #302D85;
+    color: #fff;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#form-compromisso button:hover {
+    color: #302D85;
+    background-color: #A9DD10;
+    font-weight: 500;
+
+}
+
+/* Lista de compromissos */
+#lista-compromissos {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* São váriaveis que esta sendo Puxado do JavaScript */
+.compromisso {
+    background-color: #fff;
+    border-left: 6px solid #A9DD10;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.185);
+}
+
+.compromisso strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    color: #302D85;
+}
+
+
+.compromisso button.btn-excluir {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #c82333;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.compromisso button.btn-excluir:hover {
+    background-color: #dc3545;
 }

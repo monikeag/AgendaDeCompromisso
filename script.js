@@ -46,7 +46,7 @@ function exibirCompromissos() {
         div.classList.add('compromisso'); // Adiciona uma classe CSS para estilização
         div.innerHTML = `<strong>${comp.compromisso}</strong><br>
         ${comp.data} às ${comp.hora} <br>
-        <button class="btn-excluir" data-id="${comp.id}">Apagar</button>`;
+        <button class="btn-excluir" data-id="${comp.id}"><i class="fas fa-trash-alt"></i></button>`;
 
         const botao = div.querySelector('.btn-excluir'); // Seleciona o botão de excluir dentro da div
         botao.addEventListener('click', function () {
@@ -74,3 +74,30 @@ function excluirCompromisso(id) {
 }
 
 exibirCompromissos(); // Chama a função para exibir os compromissos
+
+const btnDarkMode = document.getElementById('toggle-dark-mode');
+
+btnDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Salva preferência no localStorage
+    const modoEscuroAtivado = document.body.classList.contains('dark-mode');
+    localStorage.setItem('modo-escuro', modoEscuroAtivado);
+});
+
+// Ao carregar a página, verifica se o modo escuro estava ativado
+window.addEventListener('DOMContentLoaded', () => {
+    const modoEscuroAtivado = localStorage.getItem('modo-escuro') === 'true';
+    if (modoEscuroAtivado) {
+        document.body.classList.add('dark-mode');
+    }
+});
+
+const btnlightMode = document.getElementById('toggle-light-mode');
+btnlightMode.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+
+    // Salva preferência no localStorage
+    const modoClaroAtivado = document.body.classList.contains('light-mode');
+    localStorage.setItem('modo-claro', modoClaroAtivado);
+});

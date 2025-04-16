@@ -44,7 +44,7 @@ function exibirCompromissos() {
     compromissos.forEach(comp => {
         const div = document.createElement('div'); // Cria um elemento div para cada compromisso
         div.classList.add('compromisso'); // Adiciona uma classe CSS para estilização
-        div.innerHTML = `<strong>${comp.compromisso}</strong><br>
+        div.innerHTML = ` <div class="compromisso-info"><strong>${comp.compromisso}</strong><br>
         ${comp.data} às ${comp.hora} <br>
         <button class="btn-excluir" data-id="${comp.id}"><i class="fas fa-trash-alt"></i></button>`;
 

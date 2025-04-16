@@ -9,7 +9,14 @@
 body {
     background: #FFFAF4;
     color: #333;
+    margin: 0;
     padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
 /* Modo escuro */
@@ -39,7 +46,7 @@ body.dark-mode button {
 }
 
 #toggle-dark-mode {
-    background-color: #cecece;
+    background-color: #2e2e2e;
     color: #0c0b0b;
     border: none;
     padding: 10px;
@@ -101,7 +108,7 @@ body.dark-mode button {
 h1 {
     color: #302D85;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: 40px;
 }
 
@@ -110,7 +117,7 @@ h1 {
     background-color: #fff;
     border-left: 6px solid #A9DD10;
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 8px;
     position: relative;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.185);
@@ -140,4 +147,78 @@ h1 {
 
 .compromisso button.btn-excluir:hover {
     background-color: #dc3545;
+}
+
+
+
+
+/*Tornando o layout Responsivo*/
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .compromisso-info {
+        flex-grow: 1;
+    }
+
+    .compromisso {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 16px;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .compromisso button {
+        align-self: flex-end;
+    }
+
+    .compromisso button.btn-excluir {
+        position: static;
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+
+    .compromisso strong {
+        display: block;
+        font-size: 25px;
+        margin-bottom: 0.5rem;
+        color: #302D85;
+    }
+
+    .btn-excluir {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #c0392b;
+        transition: transform 0.2s;
+    }
+
+    .btn-excluir:hover {
+        transform: scale(1.2);
+    }
+
+    #toggle-darke-mode {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 50px;
+
+    }
 }

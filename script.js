@@ -83,6 +83,9 @@ btnDarkMode.addEventListener('click', () => {
     // Salva preferência no localStorage
     const modoEscuroAtivado = document.body.classList.contains('dark-mode');
     localStorage.setItem('modo-escuro', modoEscuroAtivado);
+
+    // Atualiza o ícone do botão
+    atualizarIconeModo(modoEscuroAtivado);
 });
 
 // Ao carregar a página, verifica se o modo escuro estava ativado
@@ -91,6 +94,20 @@ window.addEventListener('DOMContentLoaded', () => {
     if (modoEscuroAtivado) {
         document.body.classList.add('dark-mode');
     }
+
 });
 
+
+function atualizarIconeModo(ativo) {
+    btnDarkMode.textContent = ativo ? '☀️' : '🌙';
+}
+
+// Ao carregar a página, aplica o modo salvo e o ícone correspondente
+window.addEventListener('DOMContentLoaded', () => {
+    const modoEscuroSalvo = localStorage.getItem('modoEscuroAtivado') === 'true';
+    if (modoEscuroSalvo) {
+        document.body.classList.add('dark-mode');
+    }
+    atualizarIconeModo(modoEscuroSalvo);
+});
 
